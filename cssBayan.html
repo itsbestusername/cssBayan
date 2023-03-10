@@ -2,59 +2,129 @@
 <html lang = "eng">
 <head>
      <meta charset="UTF-8">
-     <h1>CSS Bayan</h1>
 </head>
 <style>
     .text{
-        font-family: bold, 30px, Times New Roman, serif;
-        background-color:#DDA0DD;
+        font-family: bold, 70px, Times New Roman, serif;
+        margin: 80px 150px;
     }
+
     .one{
-   position: absolute;
-   margin: 20px auto
+   position:absolute; 
+   margin: 20px auto;
 }
 
 .one-item{
-    border: 4px dashed #FF00FF;
+    margin-bottom: 5px;
+    border: 4px #B0E0E6;
 }
 
 .one-title{
-    font-size: 20px;
-    padding: 15px 20px;
+    font-size: 30px;
+    width: 1000px;
+    height: 30px;
     display:block;
+    padding: 15px 20px;
+    position:relative;
     cursor:pointer; 
 
     transition: 2s ease-out;
+    
 }
+
+.one-title::after {
+    content: "";
+    display: block;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #6980fe transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+
 .one-title:hover {
-    background-color: #FF00FF;
+    background-color: #B0E0E6;
 }
 
 .one-input{
     width: 0;
     height: 0;
+    
     -webkit-appearance: none;
     position: absolute;
 }
 
+.one-input:checked ~ .one-title {
+    background-color: #B0E0E6;
+}
+
+.one-input:checked ~ .one-title::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #6980fe transparent;
+
+}
+
+.one-input:checked ~ .one-text {
+    display: block;
+}
+
 .one-text{
     display: none;
+    margin: 1px 400px;
 }
 </style>
 
 <body class="text">
+<h1>CSS Bayan</h1>
 
 <div class="one">
     <div class="one-item">
-        <label class="one-title" for="one1">When you get a new task in RS School</label>
         <input class="one-input" type="checkbox"  id="one1">
+        <label class="one-title" for="one1">When you get a new task in RS School</label>
         <div class="one-text">
-            <img src="C:\rs school\cssBayan\cssBayan\memes\no-god.jpg" width="300"> 
+            <img src="C:\rs school\cssBayan\cssBayan\memes\no-god.jpg" width="500" height="400"> 
         </div>
     </div>
+    <div class="one-item">
+        <input class="one-input" type="checkbox"  id="one2">
+        <label class="one-title" for="one2">She used up a lot of your money and came to you to brag</label>
+        <div class="one-text">
+            <img src="C:\rs school\cssBayan\cssBayan\memes\lashes.jpg" width="500" height="400"> 
+        </div>
+    </div>
+    <div class="one-item">
+        <input class="one-input" type="checkbox"  id="one3">
+        <label class="one-title" for="one2">Did you sleep well?</label>
+        <div class="one-text">
+            <img src="C:\rs school\cssBayan\cssBayan\memes\did you sleep.jpg" width="500" height="400"> 
+        </div>
+    </div>
+    <div class="one-item">
+        <input class="one-input" type="checkbox"  id="one4">
+        <label class="one-title" for="one4">How i speak english in my head</label>
+        <div class="one-text">
+            <img src="C:\rs school\cssBayan\cssBayan\memes\eng.jpg" width="500" height="400"> 
+        </div>
+    </div>
+    <div class="one-item">
+        <input class="one-input" type="checkbox"  id="one5">
+        <label class="one-title" for="one5">Deal with it</label>
+        <div class="one-text">
+            <img src="C:\rs school\cssBayan\cssBayan\memes\deal-with-it-cat.jpeg" width="500" height="400"> 
+        </div>
+    </div>
+
+
 </div>
-
-
-
-
 </body>
